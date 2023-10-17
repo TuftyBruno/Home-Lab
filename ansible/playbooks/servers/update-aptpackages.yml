@@ -1,4 +1,4 @@
-- hosts: "{{ hosts }}"
+- hosts: "{{ all }}"
 
   become: yes
   tasks:
@@ -19,7 +19,7 @@
     # Send Discord message when reboot is required
     - name: Send Discord message
       uri:
-        url: "{{ discord_webhook_url }}"
+        url: "{{ https://discord.com/api/webhooks/1163842517909897267/iPhDGIkaNnU_ZUsqvYM0rtA0zK5Kfzqi8-90lYOyTeG3NJP19i-BK3OaTyPnboU7BgYn }}"
         method: POST
         body_format: json
         body: '{"content": "Reboot required on {{ inventory_hostname }}"}'
